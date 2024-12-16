@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSTV-Encoder BY Raj</title>
+    <link rel="icon" type="mylogo.png" href="mylogo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <nav class="glass-nav">
+        <div class="container">
+            <strong>SSTV Encoder by Raj</strong>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <div class="glass-card">
+            <div class="form-group">
+                <label id="modeLabel" for="modeSelect">Select an encoding type:</label>
+                <select id="modeSelect" class="glass-select">
+                    <option value="none" selected disabled hidden>No mode selected</option>
+                    <option value="none" disabled>--- Martin ---</option>
+                    <option value="M1">Martin M1 (faster transmission)</option>
+                    <option value="M2">Martin M2 (faster transmission)</option>
+                    <option value="none" disabled>--- Scottie ---</option>
+                    <option value="S1">Scottie 1 (Quality Focused)</option>
+                    <option value="S2">Scottie 2 (Quality Focused)</option>
+                    <option value="SDX">Scottie DX (Quality Focused, Slower)</option>
+                    <option value="none" disabled>--- WRASSE ---</option>
+                    <option value="WrasseSC2180">SC2-180(Best Quality, Slower)</option>
+                    <option value="none" disabled>--- PD ---</option>
+                    <option value="PD50">PD-50</option>
+                    <option value="PD90">PD-90</option>
+                    <option value="PD120">PD-120</option>
+                    <option value="PD160">PD-160</option>
+                    <option value="PD180">PD-180</option>
+                    <option value="PD240">PD-240</option>
+                    <option value="PD290">PD-290</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label id="imgLabel" for="imgPicker">Upload an image:</label>
+                <input type="file" name="imgPicker" id="imgPicker" class="glass-input" disabled />
+            </div>
+
+            <div id="imgArea" class="image-preview">
+                <canvas id="imgCanvas"></canvas>
+                <span id="warningText" class="warning-text"></span>
+            </div>
+
+            <div id="callSignControls" class="form-group">
+                <label id="callSignLabel" for="callSign">Enter your callsign (optional):</label>
+                <input type="text" name="callSign" id="callSign" placeholder="Call Sign" class="glass-input" />
+                
+                <label id="callSignLocationLabel" for="callSignLocation">Call Sign Location:</label>
+                <select id="callSignLocation" class="glass-select">
+                    <option value="top-left" selected>Top Left</option>
+                    <option value="bottom-left">Bottom Left</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="startButton" class="glass-button" disabled>Encode</button>
+                <button id="downloadButton" class="glass-button" disabled>Download</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <small>SSTV signal Encoding</small>
+        <small><a href="https://github.com/rajtilak-2020" class="footer-link">Check out the project on Github</a></small>
+        <small>&copy; <script>document.write(new Date().getFullYear())</script> K Rajtilak - Available under the MIT License</small>
+    </footer>
+    <script src="encode.js"></script>
+</body>
+</html>
